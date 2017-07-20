@@ -252,10 +252,6 @@ display: block;
     display: block;
     opacity: 0.8;
 }
-/*
-.menuForProducts>li:hover .menuHidedNew {
-    background-color: rgba(253, 146, 109,0.5);
-}*/
 
 .menuHidedNew, .menuHidedDesigners, .menuHidedWomen, .menuHidedMen, .menuHideclearence {
     position: absolute;
@@ -278,48 +274,35 @@ display: block;
 
 .basketArea {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     border-color: #949393;
     font-size: 11px;
     height: 32px;
+    align-items: center;
+}
+
+.basketArea__leftbottom {
+    display: flex;
+    align-items: center;
 }
 
 .itemsForBasket {
-  display: flex;
-   flex: 1;
-    justify-content: flex-end;
-    margin-top: 10px;
     text-transform: uppercase;
-    margin-bottom: 7px;
-    margin-right: 4px;
-}
-
-.basketArea i {
-    flex: 5;
-    margin-top: 10px;
-    justify-content: center;
-}
-
-.quantaty {
-    margin-right: 2px;
-    margin-left: 16px;
-}
-
-.totalCost {
-    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60px;
 }
 
 .borderBetween {
     padding-left: 5px;
     flex: 1;
     display: flex;
-    line-height: 38px;
 }
 .dividerInSailBusket {
     border-right: 1px solid;
     border-color: #949393;
     font-size: 12px;
-    margin: 2%;
     padding-right: 15%;
 }
 
@@ -619,11 +602,11 @@ margin: 0;
     color:  white;
     font-size: 25px;
     text-align: center;
-    transition: margin ease 2s;
+   /* transition: margin ease 2s;*/
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.19);
 }
 .girlWithGlasses:hover .bestSellers{
-    margin-top: 30%;
+  /*  margin-top: 20%;*/
     font-size: 26px;
     /*-webkit-transform: scaleY(1.0067);*/
 }
@@ -644,7 +627,7 @@ margin: 0;
     margin-top: 30%;
     font-family: HelveticaNeue, sans-serif;
     color:  white;
-    font-size: 25px;
+    font-size: 26px;
     line-height: 30px;
     text-align: center;
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.19);
@@ -664,16 +647,16 @@ background-color:  #4fafa0;
     transition: opacity ease 3s;
 }
 .hideButton4  {
-    margin: 0 0 0 18px;
+    margin: -10px 0 0 18px;
     }
 .hideButton2 {
     margin: 60px 0 0 18px;
 }
 .hideButton3 {
-    margin: -30px 0 0 60px;
+    margin: 80px 0 0 60px;
 }
 .hideButton1 {
-    margin: 265px 0 0 275px;
+    margin: 40% 0 0 10%;
 }
 
 .guyInChair:hover .hideButton4 {
@@ -786,7 +769,7 @@ margin-top: 100px;
     margin-top: 30px;
 }
 
-.part0, .part1, .part2, .part3, .part4, .part5 {
+.part0, .part1, .part2, .part3, .part4, .part5, .partClearance0, .partClearance1, .partClearance2, .partClearance3 {
     margin-top: 300px;
 }
 
@@ -883,7 +866,7 @@ transform: scale(1.1,1.05);
     clear: both;
 }
 
-.productName {
+.part0__productName, .part1__productName, .part2__productName, .part3__productName, .part4__productName, .part5__productName,.part6__productName, .part0__productNameClearance, .part1__productNameClearance, .part2__productNameClearance, .part3__productNameClearance,.part4__productNameClearance, .part5__productNameClearance {
     font-family: Arial;
     color:  #373737;
     font-size: 12px;
@@ -892,7 +875,7 @@ transform: scale(1.1,1.05);
     text-align: center;
 }
 
-.productPrice {
+.part0__productPrice, .part1__productPrice, .part2__productPrice,.part3__productPrice,.part4__productPrice,.part5__productPrice,.part6__productPrice, .part0__productPriceClearance, .part1__productPriceClearance, .part2__productPriceClearance, .part3__productPriceClearance, .part4__productPriceClearance, .part5__productPriceClearance {
     font-family: Arial, sans-serif;
     color:  #373737;
     font-size: 22px;
@@ -902,7 +885,7 @@ transform: scale(1.1,1.05);
     margin: 0;
 }
 
-.buttonToBye {
+.part0__buttonToBye, .part1__buttonToBye, .part2__buttonToBye, .part3__buttonToBye, .part4__buttonToBye, .part5__buttonToBye, .part0__buttonToByeClearance, .part1__buttonToByeClearance,.part2__buttonToByeClearance, .part3__buttonToByeClearance,.part4__buttonToByeClearance, .part5__buttonToByeClearance {
     background-color: #fd926d;
     color: white;
     font-family: Arial, sans-serif;
@@ -1219,8 +1202,8 @@ background-image: url("../img/Shape 7.png");
 /*figure*/
 
 @media screen
-and (max-width: 1199px)
-
+and (max-width: 1199px),
+    screen and(max-device-width: 1199px)
 {
     .flexForBigScreen {
         display: block;
@@ -1260,17 +1243,14 @@ and (max-width: 1199px)
         font-size: 9px;
         line-height: 18px;
     }
-    .hideButton3 {
-        margin: -20px 0 0 60px;
-    }
     .summerCollectionLetters {
         width: 20%;
-        height: 75px;
+        height: 100px;
         margin-left: 6%;
           }
     .summerBoldLetters {
         margin-bottom: 0;
-        margin-top: 15%;
+        margin-top: 40%;
     }
     .partyLetters {
         margin: 0;
@@ -1313,10 +1293,23 @@ and (max-width: 1199px)
         font-size: 23px;
     }
 }
+/*some additional things*/
+@media screen
+and (max-width: 850px),
+screen and(max-device-width: 850px)
+{
+    .social {
+        width: 86%;
+    }
+    .securedHundritPercent {
+        background-position: 25px
+    }
+}
 
 /*For the phones*/
 @media screen
-and (max-width: 761px)
+and (max-width: 761px),
+screen and(max-device-width: 761px)
 {
     .towTopBlackParts {
         max-height: 184px;
@@ -1380,24 +1373,17 @@ and (max-width: 761px)
     .basketArea {
         width: 100%;
         height: 92px;
-        line-height: 69px;
     }
     .smallScreen {
         font-size: 3em;
-        line-height: 96px;
+       /* line-height: 96px;*/
     }
     .itemsForBasket {
-        margin-top: 2%;
+        width: 100px;
     }
     .quantaty, .borderBetween  {
          font-size: 20px;
      }
-    .quantaty {
-        line-height: 72px;
-    }
-    .borderBetween  {
-        line-height: 96px;
-    }
     .dividerInSailBusket {
         font-size: 20px;
     }
@@ -1448,6 +1434,30 @@ min-height: 0;
     .findUsHere p {
         font-size: 18px;
     }
+    .basicShop {
+        height: 600px;
+    }
+    .sellUnit0, .sellUnit1, .sellDiscountUnit0, .sellDiscountUnit1 {
+        width: 300px;
+        height: 540px;
+        background-size: 300px;
+    }
+    .part0, .part1, .partClearance0, .partClearance1 {
+        margin-top: 410px;
+    }
+    .part0__productName, .part1__productName, .part2__productName, .part3__productName, .part4__productName, .part5__productName,.part6__productName, .part0__productNameClearance, .part1__productNameClearance, .part2__productNameClearance, .part3__productNameClearance,.part4__productNameClearance, .part5__productNameClearance{
+        font-size: 18px;
+        margin: 0;
+    }
+    .part0__productPrice, .part1__productPrice, .part2__productPrice,.part3__productPrice,.part4__productPrice,.part5__productPrice,.part6__productPrice, .part0__productPriceClearance, .part1__productPriceClearance, .part2__productPriceClearance, .part3__productPriceClearance, .part4__productPriceClearance, .part5__productPriceClearance {
+        font-size: 30px;
+    }
+    .part0__buttonToBye, .part1__buttonToBye, .part2__buttonToBye, .part3__buttonToBye, .part4__buttonToBye, .part5__buttonToBye, .part0__buttonToByeClearance, .part1__buttonToByeClearance,.part2__buttonToByeClearance, .part3__buttonToByeClearance,.part4__buttonToByeClearance, .part5__buttonToByeClearance {
+        margin-left: 22%;
+        width: 170px;
+        height: 45px;
+        font-size: 15px;
+    }
     .grayCercle {
         width: 300px;
         font-size: 22px;
@@ -1456,21 +1466,37 @@ min-height: 0;
 
 /*some additional things*/
 @media screen
-and (max-width: 500px)
+and (max-width: 630px),
+screen and(max-device-width: 630px)
 {
-.grayCercle {
-    width: 500px;
-    font-size: 24px;
-}
+    .basicShop {
+        height: 295px;
+    }
+    .sellUnit0, .sellUnit1, .sellDiscountUnit0, .sellDiscountUnit1 {
+        width: 140px;
+        height: 255px;
+        margin: 20px 8px;
+        background-size: 140px;
+    }
+    .part0, .part1, .partClearance0, .partClearance1 {
+        margin-top: 185px;
+    }
+    .part0__productName, .part1__productName, .part2__productName, .part3__productName, .part4__productName, .part5__productName,.part6__productName, .part0__productNameClearance, .part1__productNameClearance, .part2__productNameClearance, .part3__productNameClearance,.part4__productNameClearance, .part5__productNameClearance{
+        margin: 0;
+        font-size: 10px;
+    }
+    .part0__productPrice, .part1__productPrice, .part2__productPrice,.part3__productPrice,.part4__productPrice,.part5__productPrice,.part6__productPrice, .part0__productPriceClearance, .part1__productPriceClearance, .part2__productPriceClearance, .part3__productPriceClearance, .part4__productPriceClearance, .part5__productPriceClearance {
+        font-size: 17px;
+    }
+    .part0__buttonToBye, .part1__buttonToBye, .part2__buttonToBye, .part3__buttonToBye, .part4__buttonToBye, .part5__buttonToBye, .part0__buttonToByeClearance, .part1__buttonToByeClearance,.part2__buttonToByeClearance, .part3__buttonToByeClearance,.part4__buttonToByeClearance, .part5__buttonToByeClearance {
+        margin-left: 11%;
+        width: 110px;
+        height: 25px;
+        font-size: 10px;
+    }
+    .grayCercle {
+        width: 500px;
+        font-size: 24px;
+    }
 }
 
-@media screen
-and (max-width: 850px)
-{
-.social {
-    width: 86%;
-    }
-    .securedHundritPercent {
-    background-position: 25px
-    }
-}
