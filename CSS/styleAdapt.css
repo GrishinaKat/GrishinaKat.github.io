@@ -296,7 +296,6 @@ display: block;
 
 .borderBetween {
     padding-left: 5px;
-    flex: 1;
     display: flex;
 }
 .dividerInSailBusket {
@@ -423,14 +422,16 @@ background-image: url("../img/slider2.png");
     background-color: #f7f7f7;
     color: #6b6b6b;
     width: 55px;
-    line-height: 55px;
+    display: flex;
+    align-items: center;
 }
 
 .grayFontForContacts {
     background-color: #ededed;
     color: #6b6b6b;
     width: 55px;
-    line-height: 55px;
+   display: flex;
+    align-items: center;
 }
 
 /*Figures*/
@@ -1479,7 +1480,7 @@ screen and(max-device-width: 630px)
         background-size: 140px;
     }
     .part0, .part1, .partClearance0, .partClearance1 {
-        margin-top: 185px;
+        margin-top: 190px;
     }
     .part0__productName, .part1__productName, .part2__productName, .part3__productName, .part4__productName, .part5__productName,.part6__productName, .part0__productNameClearance, .part1__productNameClearance, .part2__productNameClearance, .part3__productNameClearance,.part4__productNameClearance, .part5__productNameClearance{
         margin: 0;
@@ -1494,6 +1495,19 @@ screen and(max-device-width: 630px)
         height: 25px;
         font-size: 10px;
     }
+    .bagWithGaryBackgroundSecond, .bagWithGaryBackground {
+        width: 95px;
+        height: 100px;
+    }
+    .bagWithGaryBackground {
+        margin-top: 70px;
+        margin-left: 20px;
+    }
+    .bagWithGaryBackgroundSecond {
+        top: 55px;
+        left: 20px;
+    }
+
     .grayCercle {
         width: 500px;
         font-size: 24px;
